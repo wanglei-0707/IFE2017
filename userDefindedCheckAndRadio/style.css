@@ -1,0 +1,82 @@
+*{
+    padding:0;
+    margin:0;
+}
+.box{
+    width:300px;
+    margin:100px auto;
+}
+h1{
+    margin-bottom: 20px;
+}
+.option{
+    height:30px;
+    line-height: 30px;
+    display: inline-block;
+}
+
+/*雪碧图实现*/
+.spirit-radio, .spirit-checkbox{
+    display: none;
+}
+.spirit-radio + label, .spirit-checkbox + label{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    background-image: url(userDefinedBg.png);
+    position: relative;
+    top:4px;
+}
+.spirit-radio:checked + label{
+    background-position: -57px -10px;
+}
+.spirit-radio:not(:checked) + label{
+    background-position: -22px -10px;
+}
+.spirit-checkbox:checked + label{
+    background-position: -57px -30px;
+}
+.spirit-checkbox:not(:checked) + label{
+    background-position: -22px -30px;
+}
+
+/*伪元素实现*/
+.radio, .checkbox{
+    display: none;
+}
+.radio + label, .checkbox + label{
+    display: inline-block;
+    width:15px;
+    height:15px;
+    border:1px solid #ccc;
+    position: relative;
+}
+.radio + label{
+    border-radius: 50%;
+}
+.radio:checked + label, .checkbox:checked + label{
+    border:1px solid red;
+}
+.radio:checked + label::after{
+    content:"";
+    display: block;
+    width:6px;
+    height:6px;
+    position: absolute;
+    top:4px;
+    left:4px;
+    border-radius: 50%;
+    background: red;
+}
+.checkbox:checked + label::after{
+    content:"\2714";
+    display: block;
+    width:6px;
+    height:6px;
+    position: absolute;
+    top:-5px;
+    left:3px;
+    color:red;
+    font-size: 2px;
+    font-weight: 700;
+}

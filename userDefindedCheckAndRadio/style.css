@@ -23,7 +23,7 @@ h1{
     display: inline-block;
     width:20px;
     height:20px;
-    background-image: url(userDefinedBg.png);
+    background-image: url(imgs/userDefinedBg.png);
     position: relative;
     top:4px;
 }

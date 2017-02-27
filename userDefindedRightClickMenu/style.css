@@ -1,0 +1,31 @@
+*{
+    padding:0;
+    margin:0;
+}
+.content{
+    width:60%;
+    height:300px;
+    padding:20px;
+    margin:100px auto;
+    background:#F5DDDD;
+    border-radius: 10px;
+    text-align: center;
+}
+.menu{
+    display: none;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 10;
+}
+.menu-item{
+    width:150px;
+    height:20px;
+    line-height: 20px;
+    padding:10px 20px;
+    list-style: none;
+    cursor: pointer;
+}

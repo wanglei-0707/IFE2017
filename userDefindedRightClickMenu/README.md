@@ -55,3 +55,10 @@ window.getComputedStyle(element, null).getPropertyValue("width");
 获取到的是触发点相对显示器屏幕左上角的距离，不随页面滚动而改变
 
 兼容性：所有浏览器均支持
+
+参考资料：
+[获取元素CSS值之getComputedStyle方法熟悉](http://www.zhangxinxu.com/wordpress/2012/05/getcomputedstyle-js-getpropertyvalue-currentstyle/)
+
+[Window.getComputedStyle()--MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/getComputedStyle)
+
+[原生js获取鼠标坐标方法全面讲解](http://www.bbs0101.com/archives/124.html)

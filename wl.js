@@ -72,6 +72,10 @@ var wl = (function(){
 		trim: function(){
 			return this.replace(/(^\s+)|(\s+$)/g,'');
 		},
+		//判断一个数组是数组
+		isArray: function(obj){
+			return Object.prototype.toString().call(obj).slice(8, -1) === 'Array';
+		},
 		//图片加载函数
 		preLoadImg: function(src,callBack){
 			var img = new Image();

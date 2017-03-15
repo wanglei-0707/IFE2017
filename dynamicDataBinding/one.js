@@ -18,7 +18,7 @@ Observer.prototype.setAccessor = function(key, val){
         enumerable: true,
         configurable: true,
         get: function(){
-            console.log('你访问了' + key);
+            console.log('你访问了' + key + ":" + val);
             return val;
         },
         set: function(newval){
@@ -45,3 +45,4 @@ app1.data.name;
 app1.data.age = 100;
 app2.data.university;
 app2.data.major = 'science';
+app2.data.major;

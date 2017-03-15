@@ -32,9 +32,9 @@ Observer.prototype.setAccessor = function(key, val){
                 return;
             }
             val = newval;
-            if(Object.prototype.toString.call(newval).slice(8, -1) === 'Object'){
-                new Observer(newval);
-            }
+            // if(Object.prototype.toString.call(newval).slice(8, -1) === 'Object'){
+            //     new Observer(newval);
+            // }
             self.$emit(key, newval);
         }
     });
@@ -49,8 +49,10 @@ Observer.prototype.$watch = function(key, fun){
 };
 Observer.prototype.$emit = function(key){
     var self = this;
+    if(!self.handler[key]){
+        return;
+    }
     var args = Array.prototype.slice.call(arguments, 1);
-    console.log(self.handler);
     for(let i=0;i<self.handler[key].length;i++){
         self.handler[key][i].call(self, args);
     }
@@ -70,7 +72,7 @@ let app2 = new Observer({
   major: 'computer'
 });
 
-app1.$watch('age', function(age){
+app1.$watch('d', function(age){
     console.log('我的年纪变大了，现在已经是：' + age + '岁了');
 })
 
